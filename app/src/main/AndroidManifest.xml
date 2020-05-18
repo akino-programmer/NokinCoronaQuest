@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".EasyModeActivity" />
-        <activity android:name=".NormalModeActivity"></activity>
+        <activity android:name=".NormalModeActivity" />
+        <activity android:name=".HardModeActivity"></activity>
     </application>
 
 </manifest>

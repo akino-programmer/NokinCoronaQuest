@@ -35,7 +35,16 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        Button modeHard = (Button) findViewById(R.id.hard_mode_button);
+        modeHard.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, HardModeActivity.class);
+                startActivity(intent);
+            }
+
+        });
 
 
 
