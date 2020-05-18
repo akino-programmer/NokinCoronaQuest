@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NokinCoronaQuest</string>
+    <string name="mainTitle">の〜きん！コロナクエスト！！</string>
+    <string name="titleName">の〜きん！コロナクエスト！！</string>
+    <string name="modeEasy">EASY</string>
+    <string name="modeNormal">NORMAL</string>
+    <string name="modeHard">HARD</string>
 </resources>
