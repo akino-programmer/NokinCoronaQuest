@@ -6,4 +6,11 @@
     <string name="normalMode">NORMAL</string>
     <string name="hardMord">HARD</string>
     <string name="back_button">戻る</string>
+    <string name="easyCoronaMonster">コロナモンスター（弱）</string>
+    <string name="coronaMonsterHp">：? / ?</string>
+    <string name="menuStart">スタート！</string>
+    <string name="menuName">メニュー</string>
+    <string name="repeat">✖</string>
+    <string name="times">回数</string>
+    <string name="hp">HP</string>
 </resources>
