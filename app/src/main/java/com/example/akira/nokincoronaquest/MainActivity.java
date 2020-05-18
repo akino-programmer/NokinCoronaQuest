@@ -24,5 +24,22 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        Button modeNormal = (Button) findViewById(R.id.normal_mode_button);
+        modeNormal.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this, NormalModeActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
+
+
+
+
+
+
     }
 }

@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EasyModeActivity"></activity>
+        <activity android:name=".EasyModeActivity" />
+        <activity android:name=".NormalModeActivity"></activity>
     </application>
 
 </manifest>
