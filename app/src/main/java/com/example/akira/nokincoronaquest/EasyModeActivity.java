@@ -43,7 +43,6 @@ public class EasyModeActivity extends AppCompatActivity {
         final Random random = new Random();
 
 
-        final int randomFirstTimes = random.nextInt(20);
 
         final int randomSecondHp = random.nextInt(20);
 
@@ -78,18 +77,18 @@ public class EasyModeActivity extends AppCompatActivity {
 //                    maximumHp.setText("/" + randomHp);
                     maximumHp.setText(String.valueOf(randomHp));
 
-                    remainingHp.setText("：" + randomHp);
+                    remainingHp.setText(String.valueOf(randomHp));
 
 
                 } else {
-                    int remainingsecondHp = Integer.valueOf(maximumHp.getText().toString());
+                    int remainingsecondHp = Integer.valueOf(remainingHp.getText().toString());
 
-                   int randomSecondHp = remainingsecondHp - remainingHpList.get(0);
+                   int randomSecondHp = remainingsecondHp - remainingHpList.get(remainingHpList.size() - 1);
 
 //                     randomSecondHp[0] = Integer.valueOf(FirstTimes.getText().toString());
 
 
-                    remainingHp.setText("：" + randomSecondHp);
+                    remainingHp.setText(String.valueOf(randomSecondHp));
 
 
 
@@ -116,6 +115,8 @@ public class EasyModeActivity extends AppCompatActivity {
 
 
                 //メニュー回数の設定
+                final int randomFirstTimes = random.nextInt(20);
+
                 FirstTimes.setText(String.valueOf(randomFirstTimes));
 
 
