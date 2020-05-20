@@ -1,5 +1,6 @@
 package com.example.akira.nokincoronaquest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -52,9 +53,17 @@ public class EasyModeActivity extends AppCompatActivity {
         Button start = (Button) findViewById(R.id.start_button);
         start.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
+
+
                 TextView maximumHp = (TextView) findViewById(R.id.maximum_hp);
                 TextView remainingHp = (TextView) findViewById(R.id.remaining_hp);
+
+//０以下の時戻る
+//              if (Integer.valueOf(remainingHp.getText().toString()) <= 0) {
+//                    finish();
+//                } else {
+
 
 
 
@@ -68,8 +77,8 @@ public class EasyModeActivity extends AppCompatActivity {
                 TextView FirstTimes = (TextView) findViewById(R.id.numberOfTimes);
 
 
-;
-                if (maximumHp.getText().equals("")){
+                ;
+                if (maximumHp.getText().equals("")) {
                     Random random = new Random();
                     int randomHp;
                     randomHp = random.nextInt(50);
@@ -83,7 +92,7 @@ public class EasyModeActivity extends AppCompatActivity {
                 } else {
                     int remainingsecondHp = Integer.valueOf(remainingHp.getText().toString());
 
-                   int randomSecondHp = remainingsecondHp - remainingHpList.get(remainingHpList.size() - 1);
+                    int randomSecondHp = remainingsecondHp - remainingHpList.get(remainingHpList.size() - 1);
 
 //                     randomSecondHp[0] = Integer.valueOf(FirstTimes.getText().toString());
 
@@ -91,9 +100,7 @@ public class EasyModeActivity extends AppCompatActivity {
                     remainingHp.setText(String.valueOf(randomSecondHp));
 
 
-
                 }
-
 
 
                 //メニューの設定
@@ -111,18 +118,17 @@ public class EasyModeActivity extends AppCompatActivity {
                 FirstMenu.setText(menuName[randomFirstMenuName]);
 
 
-
-
-
                 //メニュー回数の設定
                 final int randomFirstTimes = random.nextInt(20);
 
                 FirstTimes.setText(String.valueOf(randomFirstTimes));
 
 
-                 remainingHpList.add(randomFirstTimes);
+                remainingHpList.add(randomFirstTimes);
 
             }
+
+//            }//0以下の時戻る
         });
 
 
@@ -145,5 +151,25 @@ public class EasyModeActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
+        Button modeEasy = (Button) findViewById(R.id.result_button);
+        modeEasy.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(EasyModeActivity.this, EasyModeResultActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
+
+
     }
+
+
+
+
+
 }

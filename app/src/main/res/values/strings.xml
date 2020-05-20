@@ -14,4 +14,5 @@
     <string name="times">回数</string>
     <string name="hp">HP</string>
     <string name="maximumHp"></string>
+    <string name="resultButton">結果へ</string>
 </resources>
