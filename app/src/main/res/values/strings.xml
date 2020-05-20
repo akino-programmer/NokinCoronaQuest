@@ -15,4 +15,5 @@
     <string name="hp">HP</string>
     <string name="maximumHp"></string>
     <string name="resultButton">結果へ</string>
+    <string name="actMenulist">行ったメニュー一覧</string>
 </resources>

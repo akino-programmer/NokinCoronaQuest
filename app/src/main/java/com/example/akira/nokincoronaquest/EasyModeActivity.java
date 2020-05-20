@@ -39,13 +39,14 @@ public class EasyModeActivity extends AppCompatActivity {
 
 
         final ArrayList<Integer>  remainingHpList = new ArrayList<>();
+        final ArrayList<String>  actMenuNameList = new ArrayList<>();
 
 
         final Random random = new Random();
 
 
 
-        final int randomSecondHp = random.nextInt(20);
+//        final int randomSecondHp = random.nextInt(20);
 
 
 
@@ -58,6 +59,7 @@ public class EasyModeActivity extends AppCompatActivity {
 
                 TextView maximumHp = (TextView) findViewById(R.id.maximum_hp);
                 TextView remainingHp = (TextView) findViewById(R.id.remaining_hp);
+                Button startButton = (Button) findViewById(R.id.start_button);
 
 //０以下の時戻る
 //              if (Integer.valueOf(remainingHp.getText().toString()) <= 0) {
@@ -97,35 +99,62 @@ public class EasyModeActivity extends AppCompatActivity {
 //                     randomSecondHp[0] = Integer.valueOf(FirstTimes.getText().toString());
 
 
-                    remainingHp.setText(String.valueOf(randomSecondHp));
+                    //HP0の処理
+                    if (randomSecondHp < 0){
 
+                        final int finalHp = 0;
+
+                        remainingHp.setText(String.valueOf(finalHp));
+
+                        startButton.setText("クリア！");
+
+
+
+
+
+                    } else {//Hp0以上の処理
+                        remainingHp.setText(String.valueOf(randomSecondHp));
+                    }
 
                 }
 
 
-                //メニューの設定
+
+
+
                 TextView FirstMenu = (TextView) findViewById(R.id.menu_name);
 
-                String[] menuName = new String[4];
 
-                menuName[0] = "腕立て伏せ";
-                menuName[1] = "腹筋";
-                menuName[2] = "スクワット";
-                menuName[3] = "懸垂";
+                if (Integer.valueOf(remainingHp.getText().toString()) == 0){
+                    FirstMenu.setText("YOU");
+                    FirstTimes.setText("WIN");
 
-                int randomFirstMenuName = random.nextInt(4);
+                } else {
+                    //メニューの設定
+//                    TextView FirstMenu = (TextView) findViewById(R.id.menu_name);
 
-                FirstMenu.setText(menuName[randomFirstMenuName]);
+                    String[] menuName = new String[4];
+
+                    menuName[0] = "腕立て伏せ";
+                    menuName[1] = "腹筋";
+                    menuName[2] = "スクワット";
+                    menuName[3] = "懸垂";
+
+                    int randomFirstMenuName = random.nextInt(4);
+
+                    FirstMenu.setText(menuName[randomFirstMenuName]);
+
+                    actMenuNameList.add(menuName[randomFirstMenuName]);
 
 
-                //メニュー回数の設定
-                final int randomFirstTimes = random.nextInt(20);
+                    //メニュー回数の設定
+                    final int randomFirstTimes = random.nextInt(20);
 
-                FirstTimes.setText(String.valueOf(randomFirstTimes));
+                    FirstTimes.setText(String.valueOf(randomFirstTimes));
 
 
-                remainingHpList.add(randomFirstTimes);
-
+                    remainingHpList.add(randomFirstTimes);
+                }
             }
 
 //            }//0以下の時戻る
@@ -159,6 +188,8 @@ public class EasyModeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 Intent intent = new Intent(EasyModeActivity.this, EasyModeResultActivity.class);
+
+                intent.putExtra("resultMenuNume", actMenuNameList);
                 startActivity(intent);
             }
 
