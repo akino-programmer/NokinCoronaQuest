@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.akira.nokincoronaquest.HardModeResultActivity">
+    tools:context="com.example.akira.nokincoronaquest.NormalModeResultActivity">
 
     <Button
         android:id="@+id/back_button"
@@ -53,10 +53,10 @@
 
     <TextView
         android:id="@+id/normal"
-        android:layout_width="69dp"
+        android:layout_width="117dp"
         android:layout_height="36dp"
         android:layout_marginTop="16dp"
-        android:text="@string/hard"
+        android:text="@string/normal"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/result"
