@@ -1,5 +1,6 @@
 package com.example.akira.nokincoronaquest;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,6 +38,28 @@ public class EasyModeResultActivity extends AppCompatActivity {
             public void onClick(View view){
                 finish();
             }
+        });
+
+
+
+
+        Button top = (Button) findViewById(R.id.top_button);
+        top.setOnClickListener(new View.OnClickListener(){
+            @Override
+    public void onClick(View view){
+
+                // Intent のインスタンスを取得する（最初の画面）
+                Intent intent = new Intent(EasyModeResultActivity.this, MainActivity.class);
+
+                // EasyModeActivity消す
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
+                // MainActivity を再利用する（onCreate() は呼ばれない）
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+
+                // 遷移先の画面を呼び出す
+                startActivity(intent);
+        }
         });
 
 
