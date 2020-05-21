@@ -20,4 +20,5 @@
     <string name="hardCoronaMonster">コロナモンスター（強）</string>
     <string name="hard">HARD</string>
     <string name="easy">EASY</string>
+    <string name="normalCoronaMonster">コロナモンスター（並）</string>
 </resources>
