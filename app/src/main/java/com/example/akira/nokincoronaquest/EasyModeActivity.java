@@ -189,7 +189,21 @@ public class EasyModeActivity extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(EasyModeActivity.this, EasyModeResultActivity.class);
 
-                intent.putExtra("resultMenuNume", actMenuNameList);
+
+                ArrayList<String>  actMenuNameTimesList = new ArrayList<>();
+
+                for(int i=0; i<actMenuNameList.size(); i++){
+
+
+                    actMenuNameTimesList.add((i + 1) + "." + actMenuNameList.get(i) + "：" + remainingHpList.get(i) + "回");
+
+                    System.out.println(actMenuNameList.get(i) + remainingHpList.get(i));
+
+                }
+
+                intent.putExtra("resultMenuNumeTimes", actMenuNameTimesList);
+
+
                 startActivity(intent);
             }
 

@@ -17,16 +17,13 @@ public class EasyModeResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_easy_mode_result);
 
 
-        ArrayList<String> actMenuNameList = (ArrayList<String>)getIntent().getSerializableExtra("resultMenuNume");
+        ArrayList<String> actMenuNameTimesList = (ArrayList<String>)getIntent().getSerializableExtra("resultMenuNumeTimes");
 
-        ArrayAdapter<String> ad = new ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, actMenuNameList );
-
-//        ListView listView = new ListView(this);
-//        listView.setAdapter(ad);
+        ArrayAdapter<String> nameTimesList = new ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, actMenuNameTimesList );
 
         ListView listView = (ListView)findViewById(R.id.listView);
-        listView.setAdapter(ad);
-//        listView.setAdapter(actMenuNameList);
+        listView.setAdapter(nameTimesList);
+
 
 
 
