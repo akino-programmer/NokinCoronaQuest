@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">NokinCoronaQuest</string>
     <string name="mainTitle">の〜きん！コロナクエスト！！</string>
-    <string name="titleName">の〜きん！コロナクエスト！！</string>
+    <string name="titleName">の〜きん！︎コロナクエスト！！</string>
     <string name="easyMode">EASY</string>
     <string name="normalMode">NORMAL</string>
     <string name="hardMord">HARD</string>
@@ -18,4 +18,6 @@
     <string name="actMenulist">行ったメニュー一覧</string>
     <string name="topButton">TOPへ</string>
     <string name="hardCoronaMonster">コロナモンスター（強）</string>
+    <string name="hard">HARD</string>
+    <string name="easy">EASY</string>
 </resources>

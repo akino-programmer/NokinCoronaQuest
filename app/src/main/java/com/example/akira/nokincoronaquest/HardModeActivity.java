@@ -64,7 +64,7 @@ public class HardModeActivity extends AppCompatActivity {
                 if (maximumHp.getText().equals("")) {
                     Random random = new Random();
                     int randomHp;
-                    randomHp = random.nextInt(30)+ 20;
+                    randomHp = random.nextInt(20)+ 80;
 
 //                    maximumHp.setText("/" + randomHp);
                     maximumHp.setText(String.valueOf(randomHp));
@@ -129,7 +129,7 @@ public class HardModeActivity extends AppCompatActivity {
 
 
                     //メニュー回数の設定
-                    final int randomFirstTimes = random.nextInt(10)+ 5;
+                    final int randomFirstTimes = random.nextInt(10)+ 15;
 
                     FirstTimes.setText(String.valueOf(randomFirstTimes));
 
@@ -168,7 +168,7 @@ public class HardModeActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(HardModeActivity.this, EasyModeResultActivity.class);
+                Intent intent = new Intent(HardModeActivity.this, HardModeResultActivity.class);
 
 
                 ArrayList<String> actMenuNameTimesList = new ArrayList<>();

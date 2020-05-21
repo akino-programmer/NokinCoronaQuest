@@ -19,7 +19,8 @@
         <activity android:name=".EasyModeActivity" />
         <activity android:name=".NormalModeActivity" />
         <activity android:name=".HardModeActivity" />
-        <activity android:name=".EasyModeResultActivity"></activity>
+        <activity android:name=".EasyModeResultActivity" />
+        <activity android:name=".HardModeResultActivity"></activity>
     </application>
 
 </manifest>
