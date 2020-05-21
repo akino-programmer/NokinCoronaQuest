@@ -83,7 +83,7 @@ public class EasyModeActivity extends AppCompatActivity {
                 if (maximumHp.getText().equals("")) {
                     Random random = new Random();
                     int randomHp;
-                    randomHp = random.nextInt(50);
+                    randomHp = random.nextInt(30)+ 20;
 
 //                    maximumHp.setText("/" + randomHp);
                     maximumHp.setText(String.valueOf(randomHp));
@@ -100,7 +100,7 @@ public class EasyModeActivity extends AppCompatActivity {
 
 
                     //HP0の処理
-                    if (randomSecondHp < 0){
+                    if (randomSecondHp <= 0){
 
                         final int finalHp = 0;
 
@@ -148,7 +148,7 @@ public class EasyModeActivity extends AppCompatActivity {
 
 
                     //メニュー回数の設定
-                    final int randomFirstTimes = random.nextInt(20);
+                    final int randomFirstTimes = random.nextInt(10)+ 5;
 
                     FirstTimes.setText(String.valueOf(randomFirstTimes));
 

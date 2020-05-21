@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/easy_corona_monster_name"
+        android:id="@+id/hard_corona_monster_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -27,13 +27,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/easy_corona_monster_image"
+        android:id="@+id/hard_corona_monster_image"
         android:layout_width="175dp"
         android:layout_height="175dp"
         android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/easy_corona_monster_name"
+        app:layout_constraintTop_toBottomOf="@+id/hard_corona_monster_name"
         app:srcCompat="@android:drawable/sym_def_app_icon" />
 
     <TextView
@@ -44,7 +44,7 @@
         android:text="@string/remainingHp"
         android:textSize="23sp"
         app:layout_constraintStart_toEndOf="@+id/textView7"
-        app:layout_constraintTop_toBottomOf="@+id/easy_corona_monster_image" />
+        app:layout_constraintTop_toBottomOf="@+id/hard_corona_monster_image" />
 
     <Button
         android:id="@+id/start_button"
@@ -110,7 +110,7 @@
         android:textSize="23sp"
         app:layout_constraintEnd_toStartOf="@+id/easy_corona_monster_hp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/easy_corona_monster_image" />
+        app:layout_constraintTop_toBottomOf="@+id/hard_corona_monster_image" />
 
     <TextView
         android:id="@+id/maximum_hp"
@@ -124,7 +124,7 @@
         android:textSize="23sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/easy_corona_monster_hp"
-        app:layout_constraintTop_toBottomOf="@+id/easy_corona_monster_image" />
+        app:layout_constraintTop_toBottomOf="@+id/hard_corona_monster_image" />
 
     <Button
         android:id="@+id/result_button"
