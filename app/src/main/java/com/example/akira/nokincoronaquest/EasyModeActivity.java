@@ -44,7 +44,7 @@ public class EasyModeActivity extends AppCompatActivity {
 
         final Random random = new Random();
 
-
+        final Button resultButton = (Button) findViewById(R.id.result_button);
 
 //        final int randomSecondHp = random.nextInt(20);
 
@@ -95,12 +95,16 @@ public class EasyModeActivity extends AppCompatActivity {
 
                         startButton.setText("クリア！");
 
+                        //スタートボタンが使用できなくなる
+                        startButton.setEnabled(false);
 
-
-
+                        //結果へボタンが使用可能に
+                        resultButton.setEnabled(true);
 
                     } else {//Hp0以上の処理
                         remainingHp.setText(String.valueOf(randomSecondHp));
+
+
                     }
 
                 }
@@ -155,11 +159,6 @@ public class EasyModeActivity extends AppCompatActivity {
 
 
 
-
-
-
-
-
         Button back = (Button) findViewById(R.id.back_button);
         back.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -169,8 +168,11 @@ public class EasyModeActivity extends AppCompatActivity {
         });
 
 
-        Button modeEasy = (Button) findViewById(R.id.result_button);
-        modeEasy.setOnClickListener(new View.OnClickListener(){
+
+         //結果へボタンが通常使用不可
+        resultButton.setEnabled(false);
+
+        resultButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view){

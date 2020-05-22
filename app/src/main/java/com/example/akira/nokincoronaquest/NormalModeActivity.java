@@ -26,7 +26,7 @@ public class NormalModeActivity extends AppCompatActivity {
 
         final Random random = new Random();
 
-
+        final Button resultButton = (Button) findViewById(R.id.result_button);
 
 //        final int randomSecondHp = random.nextInt(20);
 
@@ -43,25 +43,12 @@ public class NormalModeActivity extends AppCompatActivity {
                 TextView remainingHp = (TextView) findViewById(R.id.remaining_hp);
                 Button startButton = (Button) findViewById(R.id.start_button);
 
-//０以下の時戻る
-//              if (Integer.valueOf(remainingHp.getText().toString()) <= 0) {
-//                    finish();
-//                } else {
-
-
-
-
-//                ArrayList<Integer> remainingHpList;
-//
-//                if(remainingHpList.get() == null){
-//                     remainingHpList = new ArrayList<>();
-//                }
 
 
                 TextView FirstTimes = (TextView) findViewById(R.id.numberOfTimes);
 
 
-                ;
+
                 if (maximumHp.getText().equals("-")) {
                     Random random = new Random();
                     int randomHp;
@@ -90,7 +77,11 @@ public class NormalModeActivity extends AppCompatActivity {
 
                         startButton.setText("クリア！");
 
+                        //スタートボタンが使用できなくなる
+                        startButton.setEnabled(false);
 
+                        //結果へボタンが使用可能に
+                        resultButton.setEnabled(true);
 
 
 
@@ -164,8 +155,12 @@ public class NormalModeActivity extends AppCompatActivity {
         });
 
 
-        Button modeEasy = (Button) findViewById(R.id.result_button);
-        modeEasy.setOnClickListener(new View.OnClickListener(){
+
+
+
+        //結果へボタンが通常使用不可
+        resultButton.setEnabled(false);
+        resultButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View view){
