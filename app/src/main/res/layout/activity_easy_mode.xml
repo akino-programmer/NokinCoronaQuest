@@ -151,6 +151,7 @@
         android:id="@+id/imageView5"
         android:layout_width="175dp"
         android:layout_height="178dp"
+        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/remaining_hp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
