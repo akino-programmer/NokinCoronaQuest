@@ -61,26 +61,13 @@ public class EasyModeActivity extends AppCompatActivity {
                 TextView remainingHp = (TextView) findViewById(R.id.remaining_hp);
                 Button startButton = (Button) findViewById(R.id.start_button);
 
-//０以下の時戻る
-//              if (Integer.valueOf(remainingHp.getText().toString()) <= 0) {
-//                    finish();
-//                } else {
-
-
-
-
-//                ArrayList<Integer> remainingHpList;
-//
-//                if(remainingHpList.get() == null){
-//                     remainingHpList = new ArrayList<>();
-//                }
 
 
                 TextView FirstTimes = (TextView) findViewById(R.id.numberOfTimes);
 
 
-                ;
-                if (maximumHp.getText().equals("")) {
+
+                if (maximumHp.getText().equals("-")) {
                     Random random = new Random();
                     int randomHp;
                     randomHp = random.nextInt(30)+ 20;

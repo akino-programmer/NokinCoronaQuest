@@ -62,7 +62,7 @@ public class NormalModeActivity extends AppCompatActivity {
 
 
                 ;
-                if (maximumHp.getText().equals("")) {
+                if (maximumHp.getText().equals("-")) {
                     Random random = new Random();
                     int randomHp;
                     randomHp = random.nextInt(30)+ 40;
