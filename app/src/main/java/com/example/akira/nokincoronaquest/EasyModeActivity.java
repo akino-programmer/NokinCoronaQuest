@@ -14,40 +14,18 @@ public class EasyModeActivity extends AppCompatActivity {
 
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_easy_mode);
 
 
-//        TextView FirstHp = (TextView) findViewById(R.id.easy_corona_monster_hp);
-//        TextView FirstMenu = (TextView) findViewById(R.id.menu_name);
-//        TextView FirstTimes = (TextView) findViewById(R.id.numberOfTimes);
-
-//        String[] menuName = new String[4];
-//
-//        menuName[0] = "腕立て伏せ";
-//        menuName[1] = "腹筋";
-//        menuName[2] = "スクワット";
-//        menuName[3] = "懸垂";
-
-
 
 
         final ArrayList<Integer>  remainingHpList = new ArrayList<>();
         final ArrayList<String>  actMenuNameList = new ArrayList<>();
-
-
         final Random random = new Random();
-
         final Button resultButton = (Button) findViewById(R.id.result_button);
-
-//        final int randomSecondHp = random.nextInt(20);
-
 
 
 
@@ -83,7 +61,6 @@ public class EasyModeActivity extends AppCompatActivity {
 
                     int randomSecondHp = remainingsecondHp - remainingHpList.get(remainingHpList.size() - 1);
 
-//                     randomSecondHp[0] = Integer.valueOf(FirstTimes.getText().toString());
 
 
                     //HP0の処理
@@ -155,10 +132,6 @@ public class EasyModeActivity extends AppCompatActivity {
 
 
 
-
-
-
-
         Button back = (Button) findViewById(R.id.back_button);
         back.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -197,13 +170,5 @@ public class EasyModeActivity extends AppCompatActivity {
             }
 
         });
-
-
-
     }
-
-
-
-
-
 }

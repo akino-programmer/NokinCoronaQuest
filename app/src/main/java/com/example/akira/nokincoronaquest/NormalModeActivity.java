@@ -22,15 +22,8 @@ public class NormalModeActivity extends AppCompatActivity {
 
         final ArrayList<Integer> remainingHpList = new ArrayList<>();
         final ArrayList<String>  actMenuNameList = new ArrayList<>();
-
-
         final Random random = new Random();
-
         final Button resultButton = (Button) findViewById(R.id.result_button);
-
-//        final int randomSecondHp = random.nextInt(20);
-
-
 
 
         Button start = (Button) findViewById(R.id.start_button);
@@ -132,15 +125,6 @@ public class NormalModeActivity extends AppCompatActivity {
 
 //            }//0以下の時戻る
         });
-
-
-
-
-
-
-
-
-
 
 
 

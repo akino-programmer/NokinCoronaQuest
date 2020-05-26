@@ -28,10 +28,6 @@ public class EasyModeResultActivity extends AppCompatActivity {
 
 
 
-
-
-
-
         Button back = (Button) findViewById(R.id.back_button);
         back.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -61,7 +57,5 @@ public class EasyModeResultActivity extends AppCompatActivity {
                 startActivity(intent);
         }
         });
-
-
     }
 }

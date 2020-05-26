@@ -21,15 +21,8 @@ public class HardModeActivity extends AppCompatActivity {
 
         final ArrayList<Integer>  remainingHpList = new ArrayList<>();
         final ArrayList<String>  actMenuNameList = new ArrayList<>();
-
-
         final Random random = new Random();
-
-
         final Button resultButton = (Button) findViewById(R.id.result_button);
-
-//        final int randomSecondHp = random.nextInt(20);
-
 
 
 
@@ -42,20 +35,6 @@ public class HardModeActivity extends AppCompatActivity {
                 TextView maximumHp = (TextView) findViewById(R.id.maximum_hp);
                 TextView remainingHp = (TextView) findViewById(R.id.remaining_hp);
                 Button startButton = (Button) findViewById(R.id.start_button);
-
-//０以下の時戻る
-//              if (Integer.valueOf(remainingHp.getText().toString()) <= 0) {
-//                    finish();
-//                } else {
-
-
-
-
-//                ArrayList<Integer> remainingHpList;
-//
-//                if(remainingHpList.get() == null){
-//                     remainingHpList = new ArrayList<>();
-//                }
 
 
                 TextView FirstTimes = (TextView) findViewById(R.id.numberOfTimes);
@@ -77,8 +56,6 @@ public class HardModeActivity extends AppCompatActivity {
                     int remainingsecondHp = Integer.valueOf(remainingHp.getText().toString());
 
                     int randomSecondHp = remainingsecondHp - remainingHpList.get(remainingHpList.size() - 1);
-
-//                     randomSecondHp[0] = Integer.valueOf(FirstTimes.getText().toString());
 
 
                     //HP0の処理
@@ -145,15 +122,6 @@ public class HardModeActivity extends AppCompatActivity {
 
 //            }//0以下の時戻る
         });
-
-
-
-
-
-
-
-
-
 
 
 
